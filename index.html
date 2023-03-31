@@ -1,12 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="no">
 <head>
-<title>Min statiske webside</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>algoritmer</title>
+    <link href="main.css" rel="stylesheet" type="text/css">   <!-- Koblingen til .css fi8len (stilarket) mitt -->
 </head>
-<body>
 
-<h1>Overskrift</h1>
-<p>Det virker.</p>
+<body onload="startTime()"> <!-- Funksjon for å sjekke tid ved lasting av siden-->
+   <script src="nedtelling.js"></script> 
+   <script src="Klokke.js"></script>
+    <main> <!-- Definerer mine grids-->
+        <div class="meny_topp">
+        <h1>Algoritmer</h1> 
+        </div>
+  <div class="JS1">
+    <h3>Gjett et tilfeldig nummer mellom 1 og 100:</h3>
+    <input type="text" id="gjett">
+    <button id="submit">Submit</button>
+    <p id="result"></p>
+   <script src ="gjett.js"></script>
+   
+  </div>
+    <div class="JS2">
+      <p><button id="rollDice">Trill terninger</button></p>
+      
+      <br>
+    <a href="Terning.png" download>
+      <img src="Terning.png" alt="Flytskjema for tre terninger" > 
+    </a>
+    <br>
+    <P id="result1"></P>
+    <script src="terninger.js"></script> 
+    </div>
+<div class="JS1">
+   <p id="Klokke"></p>
+</div>
+  <div class="JS2">
+      <h2>Dagens meny</h2> 
+      <p id="lengde"></p>
+    <script>   
+  /*  Popups*/
+      var forrett=prompt("Hva skal du ha til forrett?");
+      var hovedrett=prompt("Hva skal du ha til hovedrett?");
+      var dessert=prompt ("Hva skal du ha til dessert?");
 
+      /*Definerer 2 variabler, hvor den første referer til id lengde på linje 12
+      Den andre er for å regne ut lengden tegn fra variablene forrett, hovedrett og dessert på linje 20-22*/
+      var meny =document.getElementById("lengde");
+      let length = (forrett.length + hovedrett.length + dessert.length);
+      lengde.innerHTML ="Antall tegn skrevet inn er: " +length;
+
+
+    //Bruk av localStorage for å lagre verdiene
+      localStorage.forrett = forrett;
+      localStorage.hovedrett= hovedrett;
+      localStorage.dessert =dessert;
+      document.write("Forrett er: " + localStorage.forrett +"<br>");
+      document.write("Hovedrett er: " +localStorage.hovedrett + "<br>");
+      document.write("Dessert er: " +localStorage.dessert );
+      </script>
+      </div>
+   
+ 
+<div class="JS4">
+  <form id="regBy">
+    <input id ="inpNavn" type = "text" required placeholder="Navn på by">
+    <input id = "inpInnbyggere" type ="number"
+    required placeholder="Antall innbyggere">
+    <button type=" submit">Register ny by </button>
+    <table> 
+        <thead>
+            <tr><th>Navn</th><th>Antall innbyggere</th></tr>
+        </thead>
+        <tbody id = "tblByer">
+        </tbody>
+    </table>
+</form>
+<script src="tabell.js"></script>
+</div>
+
+<div class="JS4">
+  <div id="nedtelling"></div> <!-- Script for nedtelling av tid. -->
+</div>
+</main>
 </body>
 </html>

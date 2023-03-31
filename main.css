@@ -1,0 +1,428 @@
+ 
+ /* CSS Document */
+/* sørger for at vi kan bruke æ. ø og å */
+ @charset "UTF-8";
+
+
+/* Definerer body taggen*/
+body{
+    color: black; /* Farge på font*/
+    font-family: "Lucida Sans", sans-serif; /*Font type*/
+    /*background-image: linear-gradient(to right, lightblue, #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+    /*background-image: linear-gradient(to right, lightblue, #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+    background-image: linear-gradient(to right, rgb(217, 120, 10), #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+
+    }
+
+    /* @media gjør at du kan bestemme hvordan nettsiden skal se ut når skjermen blir mindre - feks. mobil eller nettbrett*/
+    @media only screen and (max-width: 680px) {
+        body {
+          background-color: green;
+        }
+        main {
+          font-size: 10px;
+        }
+      }
+      @media only screen and (min-width: 681px) and (max-width: 900px) {
+        body {
+          background-color: red;
+        }
+      }
+.boks {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.brikke {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+    
+
+      #nedtelling_H{
+
+        grid-template-columns: span 3;
+        margin-top: 10px;
+        font-size: 16px;
+        grid-row: span 2;
+        margin-right: 5px;
+       
+      }
+
+      #nedtelling_J{
+
+        grid-template-columns: span 3;
+        margin-top: 10px;
+        font-size: 16px;
+        grid-row: span 2;
+        margin-right: 5px;
+       
+      }
+      #nedtelling_P{
+
+        grid-template-columns: span 3;
+        margin-top: 10px;
+        font-size: 16px;
+        grid-row: span 2;
+        margin-right: 5px;
+       
+      }
+      #nedtelling_V{
+
+        grid-template-columns: span 3;
+        margin-top: 10px;
+        font-size: 16px;
+        grid-row: span 2;
+        margin-right: 5px;
+       
+      }
+
+      #nedtelling_S{
+
+        grid-template-columns: span 3;
+        margin-top: 10px;
+        font-size: 16px;
+        grid-row: span 2;
+        margin-right: 5px;
+    
+      }
+
+
+      #graf{
+
+        grid-template-columns: span 3;
+        margin-top: 10px;
+        font-size: 16px;
+        grid-row: span 2;
+        margin-right: 5px;
+       
+      }
+
+      #mySearch {
+        width: 10%;
+        font-size: 18px;
+        padding: 11px;
+        border: 1px solid rgb(95, 4, 4);
+  
+background-color: transparent;
+transition: width .2s ease-out;
+
+      }
+      
+      /* Style the navigation menu */
+      #myMenu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+    
+/* Definerer main taggen. Det vil si hvordan gridsene skal oppføre seg på overordnet nivå*/
+main {
+	display: grid; /* Definerer at sidene skal vises med grids*/
+	grid-column-gap: 15px; /* mellomrom mellom gridsene horisontalt*/
+	grid-row-gap: 5px;  /*mellomrom mellom gridsene vertikaltt*/
+	text-align: center; /* all teks skal midtstilles som standard*/
+	grid-template-columns: repeat(6, 1fr); /* deler skjermen i 5 like store deler - horisontalt */
+  
+  height: 100%; /* gjør at den dekker hele skjermen - uansett */
+  margin: -8px; /* Gjør at jeg ferner kanten som er rundt*/
+
+}
+/* Definerer header taggen/griden*/
+.header {
+	grid-column:span 7; /*Hvor mange av gridsene du skal bruke - horisontalt. Den er en mer enn antall grids (6), for å dekke hele skjermene*/
+	border-radius: 25px; /*Avrunnede hjørner */
+  background-image: linear-gradient(to right, lightblue, #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+  text-align: center; /* teksten er midtstilt*/
+  padding-bottom: 20px;
+}
+
+/* Denne må brukes med andakt - da et bilde aldri skal være større en det som brukes. Rediger bildet først i eget program*/
+img {
+  width: 10%; /* Sier at bildet ikke skal være større enn 100% av det elemenet (feks. .hv2) hvor det brukes*/
+  height: 50%; /* Sier at bildet ikke skal være større enn 100% av det elemenet (feks. .hv2) hvor det brukes*/
+
+}
+
+/* Definerer meny_topp griden*/
+.meny_topp{
+	grid-column:span 7; /*Hvor mange av gridsene du skal bruke - horisontalt. Den er en mer enn antall grids (6), for å dekke hele skjermene*/
+	clear: both;
+	text-align: center; 
+	background-image: linear-gradient(to left,aqua #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+	border-radius: 25px; /*Avrunnede hjørner */
+  margin: 10px;
+
+}
+* {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 200px;
+  height: 2000px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+}
+
+.JS1{
+	grid-column:span 3; /*Hvor mange av gridsene du skal bruke - horisontalt. Den er en mer enn antall grids (6), for å dekke hele skjermene*/
+	clear: both;
+	background-image: linear-gradient(to left,aqua #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+	border-radius: 25px; /*Avrunnede hjørner */
+  margin: 10px;
+  padding:50px;
+  background-color: whitesmoke;
+
+}
+
+.JS2{
+	grid-column:span 4; /*Hvor mange av gridsene du skal bruke - horisontalt. Den er en mer enn antall grids (6), for å dekke hele skjermene*/
+	clear: both; 
+	background-image: linear-gradient(to left,aqua #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+	border-radius: 25px; /*Avrunnede hjørner */
+   
+    margin: 10px;
+    background-color: whitesmoke;
+
+}
+.JS3{
+	grid-column: span 7; /*Hvor mange av gridsene du skal bruke - horisontalt. Den er en mer enn antall grids (6), for å dekke hele skjermene*/
+	clear: both;
+	text-align: center; 
+	background-image: linear-gradient(to left,aqua #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+	border-radius: 25px; /*Avrunnede hjørner */
+ 
+    margin: 10px;
+    background-color: whitesmoke;
+}
+
+.JS4{
+	grid-column: span 7; /*Hvor mange av gridsene du skal bruke - horisontalt. Den er en mer enn antall grids (6), for å dekke hele skjermene*/
+	clear: both;
+	text-align: center; 
+	background-image: linear-gradient(to left,aqua #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+	border-radius: 25px; /*Avrunnede hjørner */
+    margin: 10px;
+    padding:40px;
+    background-color: whitesmoke;
+}
+
+.footer {
+	border-radius: 25px; /*Avrunnede hjørner */
+	text-align: center; /* teksten er midtstilt*/
+	word-spacing: 10px; /*Mellomrom mellom ordene*/
+	background-image: linear-gradient(to right, lightblue, #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+	padding: 5px;
+	margin-top: 10px; /*Luft mellom skrift og toppen av "boksen"*/
+	margin-bottom: 7px; /*Luft mellom skrift og bunnen av "boksen"*/
+	margin-left: 1px;
+	/*z-index: -1; Gjør at boksen havner bak, og ikke foran andre bøkser - dersom de andre boksene vokser*/
+	grid-column:span 7; /*Hvor mange av gridsene du skal bruke - horisontalt. Den er en mer enn antall grids (6), for å dekke hele skjermene*/
+	opacity: 0.90; /* Gjør denne boksen litt gjennomsiktig*/
+	font-size: 10px; /*Skriftstørrelse*/
+}
+
+.dropdownmeny_H{
+  grid-column: span 7;
+  /*grid-row: auto;*/
+  border-radius: 25px; /*Avrunnede hjørner */
+  min-height: 500px;
+  padding: 15px;
+  margin-bottom: 7px;
+  color:black;
+  text-align: left;
+  /*opacity: 0.5; /*gjennomsiktighet/tydelighet*/
+  background-repeat:repeat;
+  /*background-image: linear-gradient(to right, lightblue, #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+  min-height: 50%;
+  font-size: 16px;
+
+  }
+
+.dropdownmeny_V{
+  grid-column: 1/3;
+  /*grid-row: auto;*/
+  border-radius: 25px; /*Avrunnede hjørner */
+  min-height: 500px;
+  padding: 15px;
+  margin-bottom: 7px;
+  overflow: hidden;
+  color:black;
+  text-align: left;
+  /*opacity: 0.5; /*gjennomsiktighet/tydelighet*/
+  background-repeat:repeat;
+  /*background-image: linear-gradient(to right, lightblue, #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+  min-height: 50%;
+  font-size: 16px; 
+  }
+
+.hv2{
+  grid-column: span 2/4;
+  /*grid-row: auto;*/
+  border-radius: 25px; /*Avrunnede hjørner */
+  min-height: 500px;
+  padding: 15px;
+  margin-bottom: 7px;
+  margin-left: 15px;
+  color:black;
+  text-align: center;
+  /*opacity: 0.5; /*gjennomsiktighet/tydelighet*/
+  background-repeat:repeat;
+  /*background-image: linear-gradient(to right, lightblue, #33b5e5); /* Standard syntax (must be last) - Gradient Background */
+  min-height: 50%;
+  font-size: 16px;
+  }
+
+  .hv3{
+    grid-column: span 3;
+    
+    border-radius: 25px; /*Avrunnede hjørner */
+    min-height: 500px; /*Minimumshøyde på elementet/boksen*/
+    padding: 15px;
+    grid-template-rows: repeat(6, 1fr);
+    margin-bottom: 7px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color:black;
+    text-align: left;
+    /*opacity: 0.5; /*gjennomsiktighet/tydelighet*/
+    background-repeat:repeat;
+    min-height: 70%;
+    font-size: 16px;
+  }
+
+  .hv4{
+    grid-column: span 2;
+    /*grid-row: auto;*/
+    border-radius: 25px; /*Avrunnede hjørner */
+    min-height: 500px; /*Minimumshøyde på elementet/boksen*/
+    padding: 15px;
+  
+    margin-bottom: 7px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color:black;
+    text-align: left;
+    /*opacity: 0.5; /*gjennomsiktighet/tydelighet*/
+    background-repeat:repeat;
+    min-height: 50%;
+    font-size: 16px;
+  }
+
+  /* Knapp for dropdownmeny*/
+  .dropbtn {
+    background-color: #4CAF50; /*Bakgrunnsfarge*/
+    color: white; /*Skriftfarge*/
+    padding: 16px; 
+    font-size: 16px; /*skriftsstørrelse*/
+    border: none; /*Fjerner rammen rundt*/
+    cursor: pointer; /*Gjør at musepekeren blir en hand*/
+    border-radius: 25px; /*Avrunnede hjørner */
+    margin-right: 40px;
+  }
+
+  /* Er elementet som inneholder knapp og meny - Her det horisontale*/
+  .navbar{
+  overflow:hidden;
+}
+
+ /* Er elementet som inneholder knapp og meny - her det vertikale*/
+.navbar_V{
+  overflow:hidden;
+  max-width: 300px;
+
+}
+  /* Er selve elemetet hvor "alt" skjer*/
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Er menyen som dukker opp - det elemenetet som gjør det til en dropdown - Her er den horisontale*/
+  .dropdown-content{
+    display: none;
+    position:absolute;/* relativ gjør at den strekker grid-en den er i . absolutt legger den over*/
+    background-color: #ac71f0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 25px; /*Avrunnede hjørner */
+  }
+
+  /* Er menyen som dukker opp - det elemenetet som gjør det til en dropdown - Her er den vertikalee*/
+  .dropdown-content_V{
+    display: none;
+    position:relative;/* relativ gjør at den strekker grid-en den er i . absolutt legger den over*/
+    background-color: #ac71f0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 25px; /*Avrunnede hjørner */
+  }
+  
+  /* Sier hva som skal skje med elementet (dropdown-meny) når du holder musepekeren over knappen - Her den horisontale*/
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display:block;
+    float:none; 
+  }
+  /* Sier hva som skal skje med elementet (dropdown-meny) når du holder musepekeren over knappen - Her den vertikalte*/
+  .dropdown-content_V a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display:block;
+    float:none; 
+  }
+
+    /* Sier hva som skal skje med elementet (dropdown-meny) når du holder musepekeren over - Her den vertikalte*/
+  .dropdown-content_V a:hover {background-color: #f1f1f1;
+    border-radius: 25px; /*Avrunnede hjørner */
+    font-size: 20px;
+}
+
+  /* Sier hva som skal skje med elementet (dropdown-meny) når du holder musepekeren over - Her den horisontale*/
+.dropdown-content a:hover {background-color: #f1f1f1;
+  border-radius: 25px; /*Avrunnede hjørner */
+  font-size: 20px;
+}
+
+/* Gjør at menyen dukker opp som en kloss/blokk/listeform -når funksjonen er aktivisert - Her den horisontale*/
+.dropdown:hover .dropdown-content {
+  display:block;
+}
+
+/* Gjør at menyen dukker opp som en kloss/blokk/listeform -når funksjonen er aktivisert - Her den vertikale*/
+  .dropdown:hover .dropdown-content_V {
+    display:block;
+  }
+  
+  /*gjør slik at knappen forandre farge når musepekeren er over den*/
+  .dropdown:hover .dropbtn {
+    background-color: #06f30e;
+    display:block;
+  }
+
+  p {
+    font-weight: bold;
+  }
+  li{
+    list-style: decimal-leading-zero;
+  }
+  ul.d{
+    list-style-type: lower-alpha;
+  
+  }
