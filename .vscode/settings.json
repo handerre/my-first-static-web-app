@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8229defa-132c-4b88-8d63-06fd8b068e88/resourceGroups/Test_statisk_web/providers/Microsoft.Web/sites/minstatiskenettside",
+    "appService.deploySubpath": "."
+}
